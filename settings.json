@@ -1,0 +1,28 @@
+{
+  "title": "Task Manager",
+  "version": "1.0",
+  "authors": "Lucas",
+  "users": [
+    {
+      "name": "Lucas Lawes",
+      "emailAddress": "k1736700@kingston.ac.uk",
+      "password": "topnotch",
+      "isAdministrator": true,
+      "theme": "Pink"
+    },
+    {
+      "name": "Test",
+      "emailAddress": "test@kingston.ac.uk",
+      "password": "topnotch",
+      "isAdministrator": true,
+      "theme": "Blue"
+    },
+    {
+      "name": "Harry",
+      "emailAddress": "harry@kingston.ac.uk",
+      "password": "topnotch",
+      "isAdministrator": false,
+      "theme": "Green"
+    }
+  ]
+}

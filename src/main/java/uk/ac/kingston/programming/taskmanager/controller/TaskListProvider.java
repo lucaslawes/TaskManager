@@ -68,4 +68,6 @@ public interface TaskListProvider {
 
     public void filterTasks(String title, String link);
 
+    public void fireOnTaskUpdated(Task task);
+
 }

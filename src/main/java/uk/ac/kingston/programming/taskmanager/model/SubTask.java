@@ -49,4 +49,10 @@ public class SubTask extends TaskItem{
         String formattedString = includeOrder ? this.getOrder() + ". " + this.getTitle() : this.getTitle();
         return formattedString;
     } 
+    
+    public String toHtml(boolean strikethrough, boolean includeOrder) {
+        return strikethrough ? 
+                    "<html><body><span style='text-decoration: line-through;'>" + toString(includeOrder) + "</span></body></html>" : 
+                    "<html><body><span>" + toString(includeOrder) + "</span></body></html>";
+    }
 }

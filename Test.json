@@ -20,7 +20,7 @@
           "order": 2,
           "id": 2,
           "title": "Undo laces on left shoe",
-          "completed": true,
+          "completed": false,
           "selected": true
         },
         {
@@ -63,7 +63,7 @@
       "title": "Ties shoes",
       "completed": false,
       "selected": true
-    },    
+    },
     {
       "assignee": "Mia",
       "targetDate": {
@@ -106,14 +106,14 @@
           "order": 2,
           "id": 2,
           "title": " Cras adipiscing enim eu turpis egestas",
-          "completed": false,
+          "completed": true,
           "selected": true
         },
         {
           "order": 3,
           "id": 3,
           "title": " Ullamcorper morbi tincidunt ornare massa",
-          "completed": false,
+          "completed": true,
           "selected": true
         },
         {

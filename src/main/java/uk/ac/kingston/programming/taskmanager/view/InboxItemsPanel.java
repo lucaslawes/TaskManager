@@ -25,11 +25,12 @@ import uk.ac.kingston.programming.taskmanager.model.User;
  */
 public final class InboxItemsPanel extends AppPanel{
     private JPopupMenu popup;
+    private Task currentTask;
     private InboxItem currentInboxItem;
     private ArrayList<InboxItem> inboxItems = new ArrayList<>();
     
     public InboxItemsPanel() {
-        super(true, true);
+        super(false, true);
 
         createChildControls();
     }
@@ -116,12 +117,16 @@ public final class InboxItemsPanel extends AppPanel{
             Task task = taskList.getTasks().get(i);
             if(task.isSelected()) {               
                 InboxItem inboxItem = new InboxItem(task);
+                if(task.equals(currentTask)){
+                    inboxItem.setActive(true);
+                }
                 inboxItems.add(inboxItem);
                 inboxItem.setPreferredSize(new Dimension(200, 100));
                 inboxItem.addMouseListener(new MouseListener() {
                     @Override
                     public void mouseClicked(MouseEvent e) {
                         currentInboxItem = (InboxItem)e.getComponent();
+                        currentTask = currentInboxItem.getTask();
                         for(InboxItem inboxItem : inboxItems) {
                             inboxItem.setActive(inboxItem.equals(currentInboxItem));
                         }

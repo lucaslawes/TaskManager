@@ -73,7 +73,6 @@ public class FileTaskListProvider implements TaskListProvider{
         
         taskListListeners.forEach((taskListListener) -> {
             taskListListener.onLogin(getUser());
-            taskListListener.onTasksUpdated();
         }); 
         return true;
     }
@@ -109,6 +108,13 @@ public class FileTaskListProvider implements TaskListProvider{
     public void fireOnTasksUpdated() {
         taskListListeners.forEach((taskListListener) -> {
             taskListListener.onTasksUpdated();
+        });
+    }
+    
+    @Override
+    public void fireOnTaskUpdated(Task task) {
+        taskListListeners.forEach((taskListListener) -> {
+            taskListListener.onTaskUpdated(task);
         });
     }
     
@@ -152,8 +158,10 @@ public class FileTaskListProvider implements TaskListProvider{
         return taskQuery;
     }    
     
-    public void addTaskListListener(TaskListListener listener) {
-        taskListListeners.add(listener);
+    public void addTaskListListener(TaskListListener taskListListener) {
+        if(!taskListListeners.contains(taskListListener)){
+            taskListListeners.add(taskListListener);
+        }
     }    
 
     @Override

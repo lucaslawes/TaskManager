@@ -14,10 +14,10 @@ import javax.swing.JScrollPane;
  */
 public final class InboxPanel extends AppPanel{
     
-    private InboxItemsPanel inboxItemsPanel;
+    private InboxItemsPanel inboxItemsPanel = null;
     
     public InboxPanel() {
-        super(true, true);
+        super(false, true);
 
         createChildControls();
     }
@@ -27,7 +27,9 @@ public final class InboxPanel extends AppPanel{
 
         setLayout(new BoxLayout(this, BoxLayout.Y_AXIS));        
         
-        inboxItemsPanel = new InboxItemsPanel();
+        if(inboxItemsPanel == null) {
+            inboxItemsPanel = new InboxItemsPanel();
+        }
         JScrollPane scrollPane = new JScrollPane(inboxItemsPanel, JScrollPane.VERTICAL_SCROLLBAR_AS_NEEDED, JScrollPane.HORIZONTAL_SCROLLBAR_AS_NEEDED);
         scrollPane.getVerticalScrollBar().setUnitIncrement(15);
         add(scrollPane);         
@@ -36,6 +38,5 @@ public final class InboxPanel extends AppPanel{
     @Override
     public void onTaskListProviderSet() {
         inboxItemsPanel.setTaskListProvider(getTaskListProvider());
-        getTaskListProvider().addTaskListListener(inboxItemsPanel);
     }    
 }

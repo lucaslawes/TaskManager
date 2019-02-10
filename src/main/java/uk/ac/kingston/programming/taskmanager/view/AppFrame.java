@@ -306,7 +306,7 @@ public final class AppFrame extends JFrame implements LoginListener, TopBarListe
         try
         {
             //loginSuccessful = taskListProvider.loginUser(emailAddress, password);
-            loginSuccessful = taskListProvider.loginUser("paul@kingston.ac.uk", "topnotch");
+            loginSuccessful = taskListProvider.loginUser("test@kingston.ac.uk", "topnotch");
         }
         catch(AppException aex)
         {

@@ -16,13 +16,6 @@
       "password": "topnotch",
       "isAdministrator": true,
       "theme": "Blue"
-    },
-    {
-      "name": "Harry",
-      "emailAddress": "harry@kingston.ac.uk",
-      "password": "topnotch",
-      "isAdministrator": false,
-      "theme": "Green"
     }
   ]
 }

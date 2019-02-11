@@ -12,4 +12,5 @@ package uk.ac.kingston.programming.taskmanager.controller;
 public interface StatusBarListener {
     public void setStatusBarText(String text);
     
+    public void setQueryBarText(String text);    
 }

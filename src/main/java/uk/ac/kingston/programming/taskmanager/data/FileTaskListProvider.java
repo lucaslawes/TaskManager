@@ -7,8 +7,6 @@ package uk.ac.kingston.programming.taskmanager.data;
 
 import java.util.ArrayList;
 import java.util.Collections;
-import javax.swing.JFrame;
-import javax.swing.JOptionPane;
 import uk.ac.kingston.programming.taskmanager.controller.AppDialogListener;
 import uk.ac.kingston.programming.taskmanager.controller.StatusBarListener;
 import uk.ac.kingston.programming.taskmanager.controller.TaskListListener;
@@ -170,6 +168,8 @@ public class FileTaskListProvider implements TaskListProvider{
         
         getTaskQuery().setSearchText(searchText);
         
+        setQueryBarText(taskQuery);
+        
         String textToSearch = searchText.toLowerCase();
         
         tasks.forEach((task) -> {
@@ -185,6 +185,8 @@ public class FileTaskListProvider implements TaskListProvider{
         getTaskQuery().setSortBy(sortBy);
         getTaskQuery().setSortOrder(sortOrder);
                 
+        setQueryBarText(taskQuery);
+        
         if(sortOrder.equals("Ascending")) {
             switch(sortBy) 
             {
@@ -229,6 +231,8 @@ public class FileTaskListProvider implements TaskListProvider{
         getTaskQuery().setFilterTitle(title);
         getTaskQuery().setFilterLink(link);
         
+        setQueryBarText(taskQuery);
+        
         ArrayList<Task> tasks = taskList.getTasks();
         switch(title) {
             case "Status":
@@ -269,6 +273,15 @@ public class FileTaskListProvider implements TaskListProvider{
         }
     }
 
+    public void setQueryBarText(TaskQuery taskQuery){
+        String queryBarText = taskQuery.getSearchText().length() == 0 ? "" : "Search: " + taskQuery.getSearchText() + " ";
+        queryBarText += taskQuery.getFilterTitle().length() == 0 ? "" : "Filter: " + taskQuery.getFilterTitle() + " (" + taskQuery.getFilterLink() + ") ";
+        queryBarText += taskQuery.getSortBy().length() == 0 ? "" : "Sort: " + taskQuery.getSortBy()+ " (" + taskQuery.getSortOrder()+ ")";
+        if(statusBarListener != null){
+            statusBarListener.setQueryBarText(queryBarText);
+        }
+    }
+    
     @Override
     public void selectTask(Task task) {
         taskListListeners.forEach((taskListListener) -> {

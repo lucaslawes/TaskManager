@@ -5,7 +5,6 @@
  */
 package uk.ac.kingston.programming.taskmanager.controller;
 
-import javax.swing.JFrame;
 import uk.ac.kingston.programming.taskmanager.model.Settings;
 import uk.ac.kingston.programming.taskmanager.model.Task;
 import uk.ac.kingston.programming.taskmanager.model.TaskList;

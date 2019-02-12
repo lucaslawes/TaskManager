@@ -11,7 +11,6 @@ import java.awt.event.ActionEvent;
 import javax.swing.BorderFactory;
 import javax.swing.BoxLayout;
 import javax.swing.JButton;
-import javax.swing.JOptionPane;
 import javax.swing.JPanel;
 import javax.swing.JScrollPane;
 import uk.ac.kingston.programming.todomanager.listener.PreviewPanelListener;

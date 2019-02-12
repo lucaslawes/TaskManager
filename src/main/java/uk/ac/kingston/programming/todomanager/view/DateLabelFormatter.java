@@ -16,8 +16,8 @@ import javax.swing.JFormattedTextField.AbstractFormatter;
  */
 public class DateLabelFormatter extends AbstractFormatter{
 
-    private String datePattern = "dd/MM/yyyy";
-    private SimpleDateFormat dateFormatter = new SimpleDateFormat(datePattern);
+    private final String datePattern = "dd/MM/yyyy";
+    private final SimpleDateFormat dateFormatter = new SimpleDateFormat(datePattern);
 
     @Override
     public Object stringToValue(String text) throws ParseException {

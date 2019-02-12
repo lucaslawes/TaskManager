@@ -6,14 +6,12 @@
 package uk.ac.kingston.programming.todomanager.view;
 
 import java.awt.Dimension;
-import java.awt.Font;
 import java.awt.event.ActionEvent;
 import java.awt.event.MouseEvent;
 import java.awt.event.MouseListener;
 import java.util.ArrayList;
 import javax.swing.BoxLayout;
 import javax.swing.JMenuItem;
-import javax.swing.JOptionPane;
 import javax.swing.JPopupMenu;
 import uk.ac.kingston.programming.todomanager.listener.InboxItemsPanelListener;
 import uk.ac.kingston.programming.todomanager.model.Task;

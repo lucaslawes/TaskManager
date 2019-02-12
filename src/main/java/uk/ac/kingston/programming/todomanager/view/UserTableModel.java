@@ -16,7 +16,7 @@ import uk.ac.kingston.programming.todomanager.model.User;
 public class UserTableModel extends AbstractTableModel {
     
     private List<User> users;
-    private String[] columnNames = {"Name", "Email Address", "Theme"};
+    private final String[] columnNames = {"Name", "Email Address", "Theme"};
     
     public void setData(List<User> users) {
         this.users = users;

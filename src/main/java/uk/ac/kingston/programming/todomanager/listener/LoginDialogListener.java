@@ -5,8 +5,6 @@
  */
 package uk.ac.kingston.programming.todomanager.listener;
 
-import uk.ac.kingston.programming.todomanager.view.LoginDialog;
-
 /**
  *
  * @author lucas

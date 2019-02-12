@@ -33,7 +33,7 @@ public final class TaskListManager{
     
     private TaskList taskList = new TaskList();
  
-    private TaskQuery defaultTaskQuery = new TaskQuery("", TaskQuery.SORT_BY_TARGET_DATE, TaskQuery.SORT_ORDER_DESC, TaskQuery.FILTER_FIELD_STATUS, TaskQuery.FILTER_BY_ALL);
+    private final TaskQuery defaultTaskQuery = new TaskQuery("", TaskQuery.SORT_BY_TARGET_DATE, TaskQuery.SORT_ORDER_DESC, TaskQuery.FILTER_FIELD_STATUS, TaskQuery.FILTER_BY_ALL);
     
     private final ArrayList<TaskListListener> taskListListeners = new ArrayList<>();
     

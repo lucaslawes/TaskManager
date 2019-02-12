@@ -6,7 +6,6 @@
 package uk.ac.kingston.programming.todomanager.model;
 
 import java.util.ArrayList;
-import java.util.Arrays;
 
 /**
  *

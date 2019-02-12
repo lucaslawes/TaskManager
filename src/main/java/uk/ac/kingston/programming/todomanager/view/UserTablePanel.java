@@ -10,16 +10,13 @@ import java.awt.Color;
 import java.awt.Component;
 import java.awt.Dimension;
 import java.awt.FlowLayout;
-import java.awt.Font;
 import java.awt.event.ActionEvent;
-import java.awt.event.ActionListener;
 import java.awt.event.MouseAdapter;
 import java.awt.event.MouseEvent;
 import java.util.List;
 import javax.swing.BorderFactory;
 import javax.swing.JButton;
 import javax.swing.JFrame;
-import javax.swing.JLabel;
 import javax.swing.JMenuItem;
 import javax.swing.JOptionPane;
 import javax.swing.JPanel;
@@ -38,7 +35,7 @@ import uk.ac.kingston.programming.todomanager.model.User;
  *
  * @author lucas
  */
-public class UserTablePanel extends JPanel{
+public final class UserTablePanel extends JPanel{
     
     private JTable table;
     private UserTableModel tableModel;
@@ -63,7 +60,7 @@ public class UserTablePanel extends JPanel{
 
                     return component;
             }            
-        };;
+        };
 
         table.setFillsViewportHeight(true);
         table.setSelectionMode(ListSelectionModel.SINGLE_SELECTION);
@@ -149,14 +146,9 @@ public class UserTablePanel extends JPanel{
         else {
             userAddEditDialog = new UserFormDialog(null, user);
         }
-       // userAddEditDialog.setResizable(false);
+        userAddEditDialog.setResizable(false);
         userAddEditDialog.setAlwaysOnTop(true);
         userAddEditDialog.setUndecorated(false);
-        userAddEditDialog.setBackground(new Color(209,196,233));
-//        userAddEditDialog.setSize(650,300);
-//        userAddEditDialog.setPreferredSize(new Dimension(650,300));
-//        userAddEditDialog.setMinimumSize(new Dimension(650,300));
-//        userAddEditDialog.setMaximumSize(new Dimension(650,300));
         userAddEditDialog.setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
         userAddEditDialog.setUserFormDialogListener(userFormDialogListener);
         userAddEditDialog.pack();

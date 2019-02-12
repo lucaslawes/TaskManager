@@ -5,9 +5,6 @@
  */
 package uk.ac.kingston.programming.todomanager.model;
 
-import com.google.gson.annotations.Expose;
-import com.google.gson.annotations.SerializedName;
-
 /**
  *
  * @author lucas

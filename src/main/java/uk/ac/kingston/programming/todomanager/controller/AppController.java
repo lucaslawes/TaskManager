@@ -5,7 +5,6 @@
  */
 package uk.ac.kingston.programming.todomanager.controller;
 
-import java.awt.Color;
 import uk.ac.kingston.programming.todomanager.listener.JTextFieldChangeListener;
 import uk.ac.kingston.programming.todomanager.listener.NavBarLinkListener;
 import uk.ac.kingston.programming.todomanager.listener.TaskListListener;

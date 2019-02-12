@@ -5,6 +5,7 @@
  */
 package uk.ac.kingston.programming.todomanager;
 
+import java.awt.Dimension;
 import java.awt.event.ActionEvent;
 import javax.swing.JFrame;
 import javax.swing.SwingUtilities;

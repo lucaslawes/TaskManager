@@ -19,7 +19,7 @@ public final class NavBarLinkHeader extends JLabel{
     
         setOpaque(false);
       
-        setBorder(BorderFactory.createEmptyBorder(20, 0, 0, 0));
+        setBorder(BorderFactory.createEmptyBorder(0, 0, 0, 0));
         
         setText(link);
         setFont(Styling.createFontXXLarge(true));

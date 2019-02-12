@@ -36,7 +36,7 @@ public final class NavBarPanel extends AppPanel {
         setLayout(new BoxLayout(this, BoxLayout.Y_AXIS));
         setBackground(Styling.createColor(700));
         
-        setBorder(BorderFactory.createEmptyBorder(20, 60, 0, 0));
+        setBorder(BorderFactory.createEmptyBorder(25, 25, 0, 0));
         
         statusNavBarLinksPanel = new NavBarLinksPanel();
         add(getStatusNavBarLinksPanel());

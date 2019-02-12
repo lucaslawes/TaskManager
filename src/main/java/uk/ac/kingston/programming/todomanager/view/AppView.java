@@ -61,23 +61,23 @@ public final class AppView extends JFrame {
         setJMenuBar(getAppMenuBar());
         
         topBarPanel = new TopBarPanel();
-        topBarPanel.setPreferredSize(new Dimension(800,140));
+        topBarPanel.setPreferredSize(new Dimension(800,110));
         add(topBarPanel, BorderLayout.NORTH);
         
         navBarPanel = new NavBarPanel();
-        navBarPanel.setPreferredSize(new Dimension(230,800));
+        navBarPanel.setPreferredSize(new Dimension(160,690));
         add(navBarPanel, BorderLayout.WEST);
         
         inboxPanel = new InboxPanel();
-        inboxPanel.setPreferredSize(new Dimension(500,800));
+        inboxPanel.setPreferredSize(new Dimension(400,690));
         add(inboxPanel, BorderLayout.CENTER);
         
         previewPanel = new PreviewPanel();
-        previewPanel.setPreferredSize(new Dimension(500,800));
+        previewPanel.setPreferredSize(new Dimension(400,690));
         add(previewPanel, BorderLayout.EAST);
         
         statusBarPanel = new StatusBarPanel();
-        statusBarPanel.setPreferredSize(new Dimension(800,40));        
+        statusBarPanel.setPreferredSize(new Dimension(800,35));        
         add(statusBarPanel, BorderLayout.SOUTH);
         
         appController.bind(false); 

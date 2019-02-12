@@ -147,10 +147,10 @@ public final class TopBarPanel extends AppPanel{
         searchLabel = new JLabel("Search: ");
         searchLabel.setFont(Styling.createFontXLarge(true));
         searchLabel.setForeground(Color.WHITE);
-        searchLabel.setBorder(BorderFactory.createEmptyBorder(0, 17, 0, 0));
+        searchLabel.setBorder(BorderFactory.createEmptyBorder(0, 45, 0, 0));
         actionPanel.add(searchLabel);
         
-        searchField = new JTextField(20);
+        searchField = new JTextField(18);
         getSearchField().setFont(Styling.createFontXLarge(false));
 
         actionPanel.add(getSearchField());

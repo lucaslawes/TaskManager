@@ -78,9 +78,9 @@ public final class NavBarLinksPanel extends JPanel{
             add(navBarLink);
         }
         
-        setMaximumSize(new Dimension(200, 25*links.length+60));
-        setPreferredSize(new Dimension(200, 25*links.length+60));
-        setSize(new Dimension(200, 25*links.length+60));                
+        setMaximumSize(new Dimension(200, 25*links.length+30));
+        setPreferredSize(new Dimension(200, 25*links.length+30));
+        setSize(new Dimension(200, 25*links.length+30));                
         
         updateUI();
     }

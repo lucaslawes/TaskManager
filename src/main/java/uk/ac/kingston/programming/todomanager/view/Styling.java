@@ -23,27 +23,27 @@ public class Styling {
     static String[] THEMES = new String[] { "Blue", "Green", "Indigo", "Pink"};
     
     public static Font createFontXXXLarge(boolean bold) {
-        return createFont(32, bold);
+        return createFont(22, bold);
     }
     
     public static Font createFontXXLarge(boolean bold) {
-        return createFont(20, bold);
+        return createFont(14, bold);
     }
     
     public static Font createFontXLarge(boolean bold) {
-        return createFont(18, bold);
+        return createFont(13, bold);
     }
     
     public static Font createFontLarge(boolean bold) {
-        return createFont(16, bold);
+        return createFont(12, bold);
     }
     
     public static Font createFontMedium(boolean bold) {
-        return createFont(14, bold);
+        return createFont(12, bold);
     }
         
     public static Font createFontSmall(boolean bold) {
-        return createFont(12, bold);
+        return createFont(10, bold);
     }
     
     public static Font createFont(int size, boolean bold) {

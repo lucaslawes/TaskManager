@@ -51,7 +51,7 @@ public final class PreviewPanel extends AppPanel{
             setBorder(BorderFactory.createEmptyBorder(20, 20, 20, 20));
 
             PreviewPanelTaskItem previewPanelTaskItem = new PreviewPanelTaskItem(task);
-            previewPanelTaskItem.setPreferredSize(new Dimension(300, 100));
+            previewPanelTaskItem.setPreferredSize(new Dimension(300, 400));
             previewPanelTaskItem.setPreviewPanelTaskItemListener((Task task1) -> {
                 if(previewPanelListener != null) {
                     previewPanelListener.onTaskItemUpdated(task1);

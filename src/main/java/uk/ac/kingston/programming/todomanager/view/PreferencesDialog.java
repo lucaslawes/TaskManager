@@ -44,9 +44,10 @@ public final class PreferencesDialog extends JDialog {
     private PreferencesDialog() {
         
         setTitle("Edit Preferences"); 
+        createChildControls();
     }
 
-    public void createChildControls() {
+    private void createChildControls() {
         setLayout(new BorderLayout());
     
         ImageIcon image = new ImageIcon(Styling.LOGO_IMAGE);
@@ -70,11 +71,12 @@ public final class PreferencesDialog extends JDialog {
             themeComboBoxModel.addElement(theme);    
         }
         
-        themeComboBoxModel.setSelectedItem(getUser().getTheme());
         themeComboBox.setModel(themeComboBoxModel);
         themeComboBox.addActionListener((ActionEvent e) -> {
             if(preferencesDialogListener != null) {
                 preferencesDialogListener.themeChanged((String)themeComboBox.getSelectedItem());
+                saveButton.setForeground(Styling.createColor(700));
+                cancelButton.setForeground(Styling.createColor(700));        
             }
         });        
         
@@ -123,6 +125,7 @@ public final class PreferencesDialog extends JDialog {
     public void setUser(User user) {
         this.user = user;
         originalTheme = user.getTheme();
+        themeComboBox.setSelectedItem(getUser().getTheme());
     }
     
     /**

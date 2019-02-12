@@ -175,6 +175,7 @@ public final class UserDialog extends JDialog implements UserFormDialogListener{
     }
     
     private void openAddEditDialog(User user) {
+        setEnabled(false);
         if(user == null) {
             userAddEditDialog = new UserFormDialog(null);
         }
@@ -194,11 +195,13 @@ public final class UserDialog extends JDialog implements UserFormDialogListener{
 
     @Override
     public void onAddUserCancel() {
+        setEnabled(true);
         userAddEditDialog.dispose();
     }
 
     @Override
     public void onAddUser(User user) {
+        setEnabled(true);
         try
         {
             userDialogListener.onAddUser(user);
@@ -213,6 +216,7 @@ public final class UserDialog extends JDialog implements UserFormDialogListener{
 
     @Override
     public void onEditUser(User user) {
+        setEnabled(true);
         userDialogListener.onEditUser(user);
         tableModel.fireTableDataChanged();        
         userAddEditDialog.dispose();
@@ -220,6 +224,7 @@ public final class UserDialog extends JDialog implements UserFormDialogListener{
 
     @Override
     public void onEditUserCancel() {
+        setEnabled(true);
         userAddEditDialog.dispose();
     }
  

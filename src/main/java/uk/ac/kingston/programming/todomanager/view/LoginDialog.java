@@ -179,6 +179,11 @@ public final class LoginDialog extends JDialog {
         emailAddressField.requestFocus();
     }
     
+    public void prepare() {
+        loginButton.setForeground(Styling.createColor(700));
+        cancelButton.setForeground(Styling.createColor(700));
+    }
+    
     public void setLoginDialogListener(LoginDialogListener loginDialogListener) {
         this.loginDialogListener = loginDialogListener;
     }

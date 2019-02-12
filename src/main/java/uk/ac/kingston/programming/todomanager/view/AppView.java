@@ -97,6 +97,7 @@ public final class AppView extends JFrame {
     public void showLoginDialog() {
         setEnabled(false);
         LoginDialog loginDialog = LoginDialog.getInstance();
+        loginDialog.prepare();
         loginDialog.setResizable(false);
         loginDialog.setAlwaysOnTop(true);        
         loginDialog.setLoginDialogListener(loginDialogController);

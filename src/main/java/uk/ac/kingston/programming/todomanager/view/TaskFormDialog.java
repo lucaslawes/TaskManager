@@ -16,7 +16,6 @@ import java.awt.Insets;
 import java.awt.event.ActionEvent;
 import java.time.LocalDate;
 import java.time.format.DateTimeFormatter;
-import java.util.ArrayList;
 import java.util.Locale;
 import java.util.Properties;
 import javax.swing.BorderFactory;
@@ -34,7 +33,6 @@ import org.jdatepicker.impl.JDatePanelImpl;
 import org.jdatepicker.impl.JDatePickerImpl;
 import org.jdatepicker.impl.UtilDateModel;
 import uk.ac.kingston.programming.todomanager.listener.TaskFormDialogListener;
-import uk.ac.kingston.programming.todomanager.model.SubTask;
 import uk.ac.kingston.programming.todomanager.model.Task;
 
 /**
@@ -215,8 +213,8 @@ public final class TaskFormDialog extends JDialog {
         buttonPanel.add(addEditButton);
         buttonPanel.add(cancelButton);
         
-        addEditButton.setPreferredSize(new Dimension(120,40));
-        cancelButton.setPreferredSize(new Dimension(120,40));
+        addEditButton.setPreferredSize(new Dimension(100,30));
+        cancelButton.setPreferredSize(new Dimension(100,30));
         buttonPanel.setBorder(BorderFactory.createEmptyBorder(20, 5, 0, 20));
         buttonPanel.setPreferredSize(new Dimension(150, 200));
  
@@ -366,7 +364,9 @@ public final class TaskFormDialog extends JDialog {
     
     public void prepareForm() {
         setTitle(isEditMode() ? "Edit Task" : "New Task");
-        addEditButton.setText(isEditMode() ? "Save Task" : "Add Task");       
+        addEditButton.setText(isEditMode() ? "Save Task" : "Add Task");
+        addEditButton.setForeground(Styling.createColor(700));
+        cancelButton.setForeground(Styling.createColor(700));
         titleField.setText(getTask().getTitle());
         assigneeField.setText(getTask().getAssignee());
         targetDatePicker.getJFormattedTextField().setText(getTask().getTargetDateAsString());

@@ -94,12 +94,15 @@ public class AppMenuBarController implements AppMenuBarListener{
         AppView.getInstance().setEnabled(false);
         PreferencesDialog preferencesDialog = PreferencesDialog.getInstance();
         preferencesDialog.setUser(TaskListManager.getInstance().getUser());
-        preferencesDialog.createChildControls();
+        //preferencesDialog.createChildControls();
         preferencesDialog.setResizable(false);
         preferencesDialog.setAlwaysOnTop(true);
         preferencesDialog.setPreferencesDialogListener(new PreferencesDialogListener() {
             @Override
             public void themeChanged(String theme) {
+                if(theme.equals(TaskListManager.getInstance().getUser().getTheme())){
+                    return;
+                }
                 TaskListManager.getInstance().getUser().setTheme(theme);
                 AppView.getInstance().refresh();
             }

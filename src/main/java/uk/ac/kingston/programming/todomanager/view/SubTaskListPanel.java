@@ -135,6 +135,10 @@ public final class SubTaskListPanel extends JPanel {
         for(int i = 0; i < subTasks.size(); i++) {
             listModel.add(i, subTasks.get(i));
         }
+        titleField.setText("");
+        newButton.setForeground(Styling.createColor(700));
+        saveButton.setForeground(Styling.createColor(700));
+        deleteButton.setForeground(Styling.createColor(700));
     }
     
     public ArrayList<SubTask> getSubTasks() {

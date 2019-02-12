@@ -1,20 +1,34 @@
 {
   "title": "Task Manager",
   "version": "1.0",
-  "authors": "Lucas",
+  "authors": "Lucas and Yeongho",
   "users": [
     {
       "name": "Lucas Lawes",
       "emailAddress": "k1736700@kingston.ac.uk",
       "password": "topnotch",
       "isAdministrator": true,
-      "theme": "Pink"
+      "theme": "Blue"
+    },
+    {
+      "name": "Jeongho Yoo",
+      "emailAddress": "k1746516@kingston.ac.uk",
+      "password": "topnotch",
+      "isAdministrator": true,
+      "theme": "Green"
+    },
+    {
+      "name": "Paul Neve",
+      "emailAddress": "paul@kingston.ac.uk",
+      "password": "topnotch",
+      "isAdministrator": true,
+      "theme": "Blue"
     },
     {
       "name": "Test",
       "emailAddress": "test@kingston.ac.uk",
       "password": "topnotch",
-      "isAdministrator": true,
+      "isAdministrator": false,
       "theme": "Blue"
     }
   ]

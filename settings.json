@@ -11,20 +11,6 @@
       "theme": "Indigo"
     },
     {
-      "name": "Jeongho Yoo",
-      "emailAddress": "k1746516@kingston.ac.uk",
-      "password": "topnotch",
-      "isAdministrator": true,
-      "theme": "Green"
-    },
-    {
-      "name": "Paul Neve",
-      "emailAddress": "paul@kingston.ac.uk",
-      "password": "topnotch",
-      "isAdministrator": true,
-      "theme": "Blue"
-    },
-    {
       "name": "Test",
       "emailAddress": "test@kingston.ac.uk",
       "password": "topnotch",

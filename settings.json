@@ -8,7 +8,7 @@
       "emailAddress": "k1736700@kingston.ac.uk",
       "password": "topnotch",
       "isAdministrator": true,
-      "theme": "Green"
+      "theme": "Indigo"
     },
     {
       "name": "Jeongho Yoo",
@@ -29,7 +29,7 @@
       "emailAddress": "test@kingston.ac.uk",
       "password": "topnotch",
       "isAdministrator": false,
-      "theme": "Blue"
+      "theme": "Indigo"
     }
   ]
 }
